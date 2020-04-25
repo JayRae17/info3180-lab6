@@ -5,3 +5,39 @@ body {
 footer  {
     padding-top: 20px;
 }
+
+.news__list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1rem;
+    /* background-color: #2196F3; */
+    padding: 1rem 6rem;
+}
+
+.news__item{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 1rem 0.7rem;
+    border-top: 0.4rem #52e1b2 solid;
+    border-radius: 0.4rem;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+.news__item:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.news__img{
+    height: 180px;
+    width: 280px;
+}
+
+.news__desc{
+    padding-top: 1rem;
+}
+
+ul{
+    list-style-type: none;
+}
