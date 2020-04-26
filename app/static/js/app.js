@@ -62,11 +62,21 @@ const NewsList = Vue.component('news-list', {
             </div>
 
               <ul class="news__list">
-                <li v-for="article in articles" class="news__item"> 
+                <li v-for="article in articles" v-if="article.urlToImage == null" class="news__item">
+
                   <h5>{{ article.title }}</h5>
-                  <img :src="'article.urlToImage'" class = "news__img"/> 
-                  <br>
-                  <p class = "news__desc" >{{ article.description }} </p>  
+                  <img src="/static/images/fallbackimg.png" class = "news__img"/> 
+                    <br>
+                  <p class = "news__desc" >{{ article.description }} </p>   
+                
+                  <div v-else>
+                    <h5>{{ article.title }}</h5>
+                    <img :src="article.urlToImage" class = "news__img"/> 
+                      <br>
+                    <p class = "news__desc" >{{ article.description }} </p>  
+                  <div>
+
+
                 </li>
 
               </ul>
